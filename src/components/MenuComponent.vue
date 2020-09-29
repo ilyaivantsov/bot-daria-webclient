@@ -5,6 +5,7 @@
         <v-avatar
           class="accent white--text"
           left
+          size="32"
           v-text="user.username.slice(0, 1).toUpperCase()"
         >
         </v-avatar>
@@ -19,7 +20,7 @@
     <v-divider></v-divider>
 
     <v-list dense>
-      <v-list-item v-for="item in items" :key="item.id" link>
+      <v-list-item v-for="item in items" :key="item.id" link :to="item.link">
         <v-list-item-icon>
           <v-icon>{{ item.icon }}</v-icon>
         </v-list-item-icon>
